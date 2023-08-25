@@ -1,0 +1,33 @@
+@import "../../../../styles/colors.module.scss";
+.header{
+  background-color: black;
+}
+.headerContainer{
+  display:flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px 0px;
+  gap:16px;
+
+}
+.headerLogo{
+  width: 180px;
+  cursor: pointer;
+}
+.headerBtn:hover{
+  border-color: $lightRed ;
+  color:$lightGray;
+  background: transparent;
+}
+
+@media (max-width : 575px){
+  .headerContainer{
+    padding:20px 16px;
+
+  }
+}
+@media (max-width : 390px){
+  .headerContainer{
+    justify-content: center;
+  }
+}

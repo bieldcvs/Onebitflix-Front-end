@@ -1,0 +1,180 @@
+@import "./colors.module.scss";
+
+.main{
+  display:flex;
+  flex-direction: column;
+}
+.gridContainer{
+  flex: 1 0 auto;
+  padding: 80px 0;
+}
+
+.form{
+  border : 1px solid $darkGray;
+  padding: 20px 0px;
+  max-width:100%;
+}
+
+.formName{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap:10px;
+  width: 80%;
+  margin:20px auto;
+  text-transform: uppercase;
+}
+.nameAbreviation{
+  font-size:40px;
+  font-weight: bold;
+  min-height: 70px;
+  min-width: 70px;
+  background-color : white;
+  color:black;
+  border-radius:50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.userName{
+  font-size:30px;
+  font-weight: bold;
+}
+.memberTime{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.memberTimeImg{
+  width: 20px;
+}
+.memberText{
+  font-size: 14px;
+  color: $lightGray;
+}
+
+.label{
+  font-size: 14px;
+  font-weight: bold;
+}
+.inputFlexDiv{
+  display:flex;
+  gap:50px;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.inputFlex{
+  text-transform: uppercase;
+  width: 250px;
+  background-color: transparent;
+  border:1px solid $darkGray;
+  color:white;
+  &::placeholder{
+    color:$lightGray;
+  }
+  &:focus{
+    box-shadow:none;
+    border-color:$lightRed;
+    color:white;
+    background-color:transparent;
+  }
+}
+
+.inputNormalDiv{
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  margin-top: 20px;
+  gap:20px;
+}
+
+.input{
+  @extend .inputFlex;
+  text-transform: lowercase;
+  width:550px;
+}
+
+.formBtn{
+  display:block;
+  margin: 10px auto;
+  border-color: $lightRed;
+  text-align: center;
+  color:white;
+  font-weight:15px;
+  padding: 6px 20px;
+  &:hover{
+    border-color:$darkRed;
+    background-color: transparent;
+    color:$lightGray;
+  }
+}
+.title{
+  font-size:45px;
+  font-weight: bold;
+  padding-bottom: 50px ;
+}
+
+.renderForm{
+  display:block;
+  width:200px;
+  border: 1px solid $darkGray;
+  background-color: transparent;
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 14px 0px;
+
+  &:hover{
+    background-color: transparent;
+    color: $lightRed;
+  }
+  &:active{
+    background-color: transparent;
+    box-shadow: none;
+  }
+  &:focus{
+    background-color: transparent;
+    box-shadow: none;
+  }
+}
+.header{
+  background-color: black;
+}
+.footer{
+  background-color: black;
+}
+
+@media(max-width:991px){
+  .title{
+    text-align:center;
+  }
+  .btnColumn{
+    width:100%;
+    margin-bottom: 40px;
+  }
+}
+@media(max-width:761px){
+  .inputFlexDiv{
+    gap:20px;
+  }
+  .inputFlex{
+    width:400px;
+  }
+}
+@media(max-width:460px){
+  .title{
+    font-size:30px;
+    margin-bottom:10px;
+  }
+  .nameAbreviation{
+    font-size: 30px;
+    min-height: 60px;
+    min-width: 60px;
+  }
+  .userName{
+    font-size:25px;
+  }
+  .inputFlex{
+    width:95%;
+  }
+}

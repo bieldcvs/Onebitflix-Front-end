@@ -1,0 +1,46 @@
+@import "../../../../styles/colors.module.scss";
+.slide {
+  width: 280px;
+  height: 300px;
+  border: 1px solid $darkGray;
+
+  transition: 0.4s;
+  cursor: pointer;
+  /* LINHA ADICIONADA */margin-left: 12px;
+
+  overflow: hidden;
+  text-overflow: clip;
+
+  &:hover {
+    border-color: $lightRed;
+    height: 320px;
+  }
+}
+
+.slideTitle {
+  color: white;
+  font-weight: bold;
+  padding: 8px 16px;
+}
+.slideDescription {
+  font-size: 14px;
+  padding: 0px 16px;
+  color: #ccc8c8;
+}
+
+@media (max-width:1200px){
+  .slide{
+    margin-left: 20px;
+  }
+}
+@media (max-width:600px){
+  .slide{
+    margin-left: 8px;
+  }
+}
+@media (max-width:300px){
+  .slide{
+    width: 100%;
+    margin-left:0px;
+  }
+}
